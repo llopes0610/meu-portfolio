@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Send, Moon, Sun, ExternalLink, Mail, Phone, Linkedin, Code, Database, Zap, Layers, ChevronDown, MapPin, Download, ArrowRight } from 'lucide-react';
+import { Menu, X, Send, Moon, Sun, ExternalLink, Mail, Phone, Linkedin, Code, Database, Zap, Layers, ChevronDown, MapPin, Download, ArrowRight, Instagram } from 'lucide-react';
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,7 +56,7 @@ export default function Portfolio() {
       {/* Navbar */}
       <nav className={`fixed w-full z-50 transition-all backdrop-blur-md ${isScrolled ? (isDark ? 'bg-gray-950/80 border-b border-gray-800' : 'bg-white/80 border-b border-gray-200') : 'bg-transparent'}`}>
         <div className="w-full px-4 py-4 flex justify-between items-center max-w-7xl mx-auto">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Soli Deo Gloria</div>
+          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">LSL</div>
           
           <div className="hidden md:flex gap-8 items-center">
             {['Sobre', 'Competências', 'Experiência', 'Formação', 'Contato'].map(item => (
@@ -117,7 +117,7 @@ export default function Portfolio() {
                 "Transformo sistemas complexos em soluções estáveis, eficientes e escaláveis."
               </p>
 
-              <div className={`flex flex-col sm:flex-row gap-4 mb-8 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+              <div className={`flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                 <div className="flex items-center gap-2 justify-center sm:justify-start">
                   <Mail className="w-4 h-4 text-blue-600" />
                   <a href="mailto:lucaslopes.ti@live.com" className="hover:text-blue-600">lucaslopes.ti@live.com</a>
@@ -125,6 +125,10 @@ export default function Portfolio() {
                 <div className="flex items-center gap-2 justify-center sm:justify-start">
                   <Phone className="w-4 h-4 text-blue-600" />
                   <a href="tel:+5511987079347" className="hover:text-blue-600">+55 (11) 98707-9347</a>
+                </div>
+                <div className="flex items-center gap-2 justify-center sm:justify-start">
+                  <Instagram className="w-4 h-4 text-blue-600" />
+                  <a href="https://www.instagram.com/lucas5sola/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">@lucas5sola</a>
                 </div>
               </div>
 
