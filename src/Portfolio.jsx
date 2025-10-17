@@ -38,11 +38,58 @@ export default function Portfolio() {
   ];
 
   const experience = [
-    { company: 'Strada', role: 'Analista de Suporte N3 / Analista de Sistemas', period: '2022 – Presente', desc: 'Resolução de incidentes críticos, análise de performance SQL/Oracle, testes automatizados' },
-    { company: 'Unitrading Logistics', role: 'Analista de TI Sênior', period: '2021 – 2022', desc: 'Levantamento de requisitos, otimização de fluxos e sustentação de sistemas críticos' },
-    { company: 'GAFOR Logística', role: 'Analista de TI Pleno', period: '2020 – 2021', desc: 'Integração SAP, automação de processos e geração de relatórios' },
-    { company: 'Carrefour', role: 'Analista de Sistemas', period: '2018 – 2019', desc: 'Suporte N2 em ERP Hybris, gestão via Jira' },
-    { company: 'JBS', role: 'Analista de Suporte SAP', period: '2015 – 2018', desc: 'Sustentação SAP, monitoramento e relatórios técnicos' },
+    { 
+      company: 'Strada', 
+      role: 'Analista de Suporte N3 / Analista de Sistemas', 
+      period: '2022 – 2025', 
+      desc: [
+        'Resolução de incidentes críticos em aplicação de logística, garantindo alta disponibilidade',
+        'SQL, Oracle e NewRelic para análise de performance, logs e integridade de dados',
+        'Documentação técnica e funcional (BPMN, UML)',
+        'QA e testes automatizados, validação de GMUDs e acompanhamento de deploys',
+        'Procedimentos técnicos preventivos que reduziram falhas e tempo de resposta'
+      ]
+    },
+    { 
+      company: 'Unitrading Logistics', 
+      role: 'Analista de TI Sênior', 
+      period: '2021 – 2022', 
+      desc: [
+        'Levantamento detalhado de requisitos junto aos stakeholders',
+        'Otimização de fluxos de negócio e processos internos',
+        'Sustentação de sistemas críticos com alta disponibilidade'
+      ]
+    },
+    { 
+      company: 'GAFOR Logística', 
+      role: 'Analista de TI Pleno', 
+      period: '2020 – 2021', 
+      desc: [
+        'Integração de sistemas SAP com sistemas internos legados',
+        'Automação de processos repetitivos através de scripts e procedures',
+        'Geração de relatórios SQL complexos para análise de dados'
+      ]
+    },
+    { 
+      company: 'Carrefour', 
+      role: 'Analista de Sistemas', 
+      period: '2018 – 2019', 
+      desc: [
+        'Suporte N2 para plataforma de pedidos online',
+        'Administração do ERP Hybris com gerenciamento de usuários',
+        'Análise e resolução de inconsistências de dados'
+      ]
+    },
+    { 
+      company: 'JBS', 
+      role: 'Analista de Suporte SAP', 
+      period: '2015 – 2018', 
+      desc: [
+        'Sustentação de sistemas SAP em produção',
+        'Monitoramento através de ferramentas como Zabbix',
+        'Geração de relatórios técnicos para a administração'
+      ]
+    }
   ];
 
   const education = [
@@ -56,7 +103,7 @@ export default function Portfolio() {
       {/* Navbar */}
       <nav className={`fixed w-full z-50 transition-all backdrop-blur-md ${isScrolled ? (isDark ? 'bg-gray-950/80 border-b border-gray-800' : 'bg-white/80 border-b border-gray-200') : 'bg-transparent'}`}>
         <div className="w-full px-4 py-4 flex justify-between items-center max-w-7xl mx-auto">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">LSL</div>
+          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Soli Deo Gloria</div>
           
           <div className="hidden md:flex gap-8 items-center">
             {['Sobre', 'Competências', 'Experiência', 'Formação', 'Contato'].map(item => (
