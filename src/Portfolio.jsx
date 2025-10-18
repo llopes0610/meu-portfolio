@@ -273,7 +273,7 @@ export default function Portfolio() {
               </div>
             </div>
             <p className={`text-lg leading-relaxed mb-6 mt-8 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Comecei minha carreira como Analista de Suporte e evoluí para Sênior ao compreender que os melhores sistemas não são apenas estáveis—são <strong>invisíveis ao usuário final</strong>.
+              Comecei minha carreira como Analista de Suporte e evoluí para Sênior ao compreender que os melhores sistemas não são apenas estáveis, são <strong>invisíveis ao usuário final</strong>.
             </p>
 
             <p className={`text-lg leading-relaxed mb-6 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
