@@ -43,7 +43,7 @@ export default function Portfolio() {
       role: 'Analista de Suporte N3 / Analista de Sistemas', 
       period: '2022 – 2025', 
       desc: [
-        'Resolução de incidentes críticos em aplicação de logística, garantindo alta disponibilidade',
+        'Resolução de incidentes críticos em aplicação de logística, garantindo alta disponibilidade', 
         'SQL, Oracle e NewRelic para análise de performance, logs e integridade de dados',
         'Documentação técnica e funcional (BPMN, UML)',
         'QA e testes automatizados, validação de GMUDs e acompanhamento de deploys',
@@ -93,6 +93,7 @@ export default function Portfolio() {
   ];
 
   const education = [
+    { course: 'Inteligência Artificial e Automação Digital', institution: 'Unifecaf e RocketSeat', period: '2025–2026' },
     { course: 'Desenvolvimento de Software FullStack', institution: 'Cubos Academy', period: '2024–2025' },
     { course: 'Engenharia de Dados', institution: 'Data Science Academy', period: '2022–2023' },
     { course: 'Análise e Desenvolvimento de Sistemas', institution: 'Universidade Anhembi Morumbi', period: '2018–2020' },
@@ -187,7 +188,7 @@ export default function Portfolio() {
                   <Send className="w-5 h-5" /> Contato
                 </a>
                 <a href="/CV_Lucas_Silva_Lopes.pdf" download className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg hover:shadow-xl text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
-                  <Download className="w-5 h-5" /> CV
+                  <Download className="w-5 h-5" /> Baixe o CV
                 </a>
               </div>
             </div>
@@ -219,7 +220,8 @@ export default function Portfolio() {
             </p>
             <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               Atuo com <strong>SQL, Oracle, Python, .NET</strong> e <strong>ERPs (SAP/Hybris)</strong>, além de metodologias ágeis como <strong>Scrum e Kanban</strong>. Tenho foco em garantir <strong>alta disponibilidade</strong>, <strong>otimizar processos</strong> e aplicar soluções inteligentes.
-            </p>
+            </p> <br/>
+            <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}><strong>Baixe meu CV completo acima ;D</strong></p>
           </div>
         </div>
       </section>
@@ -261,7 +263,18 @@ export default function Portfolio() {
                   </div>
                   <p className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'} mt-2 md:mt-0`}>{exp.period}</p>
                 </div>
-                <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{exp.desc}</p>
+                {Array.isArray(exp.desc) ? (
+                  <ul className={`space-y-2 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                    {exp.desc.map((item, i) => (
+                      <li key={i} className="text-sm md:text-base flex items-start gap-2">
+                        <span className="text-blue-600 font-bold mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className={`text-sm md:text-base ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{exp.desc}</p>
+                )}
               </div>
             ))}
           </div>
@@ -290,6 +303,10 @@ export default function Portfolio() {
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                   <span><strong>MCSA Windows Server 2012</strong> — Green Treinamentos (2015)</span>
+                </li>
+                 <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                  <span><strong>ITIL V3</strong> — Impacta (2015)</span>
                 </li>
               </ul>
             </div>
