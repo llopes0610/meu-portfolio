@@ -33,7 +33,7 @@ export default function Portfolio() {
     { icon: <Database className="w-6 h-6" />, title: 'Bancos de Dados', items: ['SQL', 'Oracle', 'PL/SQL'] },
     { icon: <Code className="w-6 h-6" />, title: 'Programação', items: ['.NET', 'Python', 'Shell Scripts'] },
     { icon: <Zap className="w-6 h-6" />, title: 'Sustentação', items: ['Incidentes Críticos', 'Performance', 'QA'] },
-    { icon: <Layers className="w-6 h-6" />, title: 'Ferramentas', items: ['SAP', 'Jira', 'NewRelic', 'Zabbix', 'Grafana', 'Zendesk'] },
+    { icon: <Layers className="w-6 h-6" />, title: 'Ferramentas', items: ['SAP', 'Jira', 'NewRelic', 'Elasticsearch', 'Grafana', 'Zendesk'] },
     { icon: <Award className="w-6 h-6" />, title: 'Metodologias', items: ['Scrum', 'Kanban', 'Agile'] },
     { icon: <Code className="w-6 h-6" />, title: 'Modelagem', items: ['BPMN', 'UML', 'Documentação'] },
   ];
@@ -281,7 +281,7 @@ export default function Portfolio() {
             </p>
 
             <p className={`text-lg leading-relaxed mb-6 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Trabalho com <strong>SQL, Oracle, Python, .NET, SAP</strong> e ferramentas modernas de observabilidade (<strong>Grafana, Zabbix</strong>). Mas meu verdadeiro diferencial é transformar requisitos nebulosos em soluções precisas—seja através de <strong>BPMN/UML</strong> ou code robusto.
+              Trabalho com <strong>SQL, Oracle, Python, .NET, SAP</strong> e ferramentas modernas de observabilidade (<strong>Grafana, Zabbix, New Relic, Elasticsearch</strong>). Mas meu verdadeiro diferencial é transformar requisitos nebulosos em soluções precisas—seja através de <strong>BPMN/UML</strong> ou code robusto.
             </p>
 
             <p className={`text-lg leading-relaxed italic font-semibold text-blue-600 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
