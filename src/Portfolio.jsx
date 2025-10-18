@@ -181,14 +181,14 @@ export default function Portfolio() {
               </div>
 
               <div className="flex flex-wrap gap-2 md:gap-4 justify-center md:justify-start">
-                <a href="https://www.linkedin.com/in/lucasslopes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 shadow-lg hover:shadow-xl text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
+                <a href="https://www.linkedin.com/in/lucasslopes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl !text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
                   <Linkedin className="w-5 h-5" /> LinkedIn
                 </a>
-                <a href="#contato" className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 shadow-lg hover:shadow-xl text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
+                <a href="#contato" className="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 shadow-lg hover:shadow-xl !text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
                   <Send className="w-5 h-5" /> Contato
                 </a>
-                <a href="/CV_Lucas_Silva_Lopes.pdf" download className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg hover:shadow-xl text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
-                  <Download className="w-5 h-5" /> Baixe o CV
+                <a href="/CV_Lucas_Silva_Lopes.pdf" download className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl !text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
+                  <Download className="w-5 h-5" /> CV
                 </a>
               </div>
             </div>
@@ -307,6 +307,10 @@ export default function Portfolio() {
                  <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                   <span><strong>ITIL V3</strong> — Impacta (2015)</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                  <span><strong>CCNA 5.0</strong> — NetAcademy (2014)</span>
                 </li>
               </ul>
             </div>
