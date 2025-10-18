@@ -30,11 +30,13 @@ export default function Portfolio() {
   const borderClass = isDark ? 'border-gray-700' : 'border-gray-200';
 
   const skills = [
-    { icon: <Database className="w-6 h-6" />, title: 'Bancos de Dados', items: ['SQL', 'Oracle', 'PL/SQL'] },
-    { icon: <Code className="w-6 h-6" />, title: 'Programação', items: ['.NET', 'Python', 'Microsserviços'] },
-    { icon: <Zap className="w-6 h-6" />, title: 'Sustentação', items: ['Incidentes Críticos', 'Performance', 'QA'] },
-    { icon: <Layers className="w-6 h-6" />, title: 'Ferramentas', items: ['SAP', 'Jira', 'NewRelic', 'Zabbix'] },
-  ];
+  { icon: <Database className="w-6 h-6" />, title: 'Bancos de Dados', items: ['SQL', 'Oracle', 'PL/SQL'] },
+  { icon: <Code className="w-6 h-6" />, title: 'Programação', items: ['.NET', 'Python', 'Shell Scripts'] },
+  { icon: <Zap className="w-6 h-6" />, title: 'Sustentação', items: ['Incidentes Críticos', 'Performance', 'QA'] },
+  { icon: <Layers className="w-6 h-6" />, title: 'Ferramentas', items: ['SAP', 'Jira', 'NewRelic', 'Zabbix', 'Grafana', 'Zendesk'] },
+  { icon: <Award className="w-6 h-6" />, title: 'Metodologias', items: ['Scrum', 'Kanban', 'Agile'] },
+  { icon: <Code className="w-6 h-6" />, title: 'Modelagem', items: ['BPMN', 'UML', 'Documentação'] },
+];
 
   const softSkills = [
     { title: 'Liderança Técnica', description: 'Mentoria de times e condução de projetos críticos em ambientes corporativos' },
@@ -213,27 +215,27 @@ export default function Portfolio() {
               </p>
 
               <div className={`flex flex-col gap-2 mb-8 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-  <div className="flex flex-wrap gap-3">
-    <div className="flex items-center gap-2">
-      <Mail className="w-4 h-4 text-blue-600" />
-      <a href="mailto:lucaslopes.ti@live.com">lucaslopes.ti@live.com</a>
-    </div>
-    <div className="flex items-center gap-2">
-      <Phone className="w-4 h-4 text-blue-600" />
-      <a href="tel:+5511987079347">+55 (11) 98707-9347</a>
-    </div>
-  </div>
-  <div className="flex flex-wrap gap-3">
-    <div className="flex items-center gap-2">
-      <Instagram className="w-4 h-4 text-blue-600" />
-      <a href="https://www.instagram.com/lucas5sola/" target="_blank" rel="noopener noreferrer">@lucas5sola</a>
-    </div>
-    <div className="flex items-center gap-2">
-      <Github className="w-4 h-4 text-blue-600" />
-      <a href="https://github.com/llopes0610" target="_blank" rel="noopener noreferrer">github.com/llopes0610</a>
-    </div>
-  </div>
-</div>
+                <div className="flex flex-wrap gap-3">
+                  <div className="flex items-center gap-2">
+                    <Mail className="w-4 h-4 text-blue-600" />
+                    <a href="mailto:lucaslopes.ti@live.com">lucaslopes.ti@live.com</a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-blue-600" />
+                    <a href="tel:+5511987079347">+55 (11) 98707-9347</a>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <div className="flex items-center gap-2">
+                    <Instagram className="w-4 h-4 text-blue-600" />
+                    <a href="https://www.instagram.com/lucas5sola/" target="_blank" rel="noopener noreferrer">@lucas5sola</a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Github className="w-4 h-4 text-blue-600" />
+                    <a href="https://github.com/llopes0610" target="_blank" rel="noopener noreferrer">github.com/llopes0610</a>
+                  </div>
+                </div>
+              </div>
 
               <div className="flex flex-wrap gap-2 md:gap-4 justify-center md:justify-start">
                 <a href="https://www.linkedin.com/in/lucasslopes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl !text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
@@ -285,7 +287,7 @@ export default function Portfolio() {
       <section id="competências" className="py-20 px-4 w-screen">
         <div className="w-full max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Competências Técnicas</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
             {skills.map((skill, idx) => (
               <div key={idx} className={`${cardBgClass} backdrop-blur-sm p-6 rounded-xl border ${borderClass} transition-all hover:shadow-lg hover:scale-105 group`}>
                 <div className="text-blue-600 mb-4 group-hover:scale-125 transition-transform">{skill.icon}</div>
