@@ -30,13 +30,13 @@ export default function Portfolio() {
   const borderClass = isDark ? 'border-gray-700' : 'border-gray-200';
 
   const skills = [
-  { icon: <Database className="w-6 h-6" />, title: 'Bancos de Dados', items: ['SQL', 'Oracle', 'PL/SQL'] },
-  { icon: <Code className="w-6 h-6" />, title: 'Programação', items: ['.NET', 'Python', 'Shell Scripts'] },
-  { icon: <Zap className="w-6 h-6" />, title: 'Sustentação', items: ['Incidentes Críticos', 'Performance', 'QA'] },
-  { icon: <Layers className="w-6 h-6" />, title: 'Ferramentas', items: ['SAP', 'Jira', 'NewRelic', 'Zabbix', 'Grafana', 'Zendesk'] },
-  { icon: <Award className="w-6 h-6" />, title: 'Metodologias', items: ['Scrum', 'Kanban', 'Agile'] },
-  { icon: <Code className="w-6 h-6" />, title: 'Modelagem', items: ['BPMN', 'UML', 'Documentação'] },
-];
+    { icon: <Database className="w-6 h-6" />, title: 'Bancos de Dados', items: ['SQL', 'Oracle', 'PL/SQL'] },
+    { icon: <Code className="w-6 h-6" />, title: 'Programação', items: ['.NET', 'Python', 'Shell Scripts'] },
+    { icon: <Zap className="w-6 h-6" />, title: 'Sustentação', items: ['Incidentes Críticos', 'Performance', 'QA'] },
+    { icon: <Layers className="w-6 h-6" />, title: 'Ferramentas', items: ['SAP', 'Jira', 'NewRelic', 'Zabbix', 'Grafana', 'Zendesk'] },
+    { icon: <Award className="w-6 h-6" />, title: 'Metodologias', items: ['Scrum', 'Kanban', 'Agile'] },
+    { icon: <Code className="w-6 h-6" />, title: 'Modelagem', items: ['BPMN', 'UML', 'Documentação'] },
+  ];
 
   const softSkills = [
     { title: 'Liderança Técnica', description: 'Mentoria de times e condução de projetos críticos em ambientes corporativos' },
@@ -273,12 +273,20 @@ export default function Portfolio() {
               </div>
             </div>
             <p className={`text-lg leading-relaxed mb-6 mt-8 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Sou Analista de Sistemas e Suporte <strong>Pleno/Sênior</strong> com mais de 8 anos de experiência em análise, sustentação e integração de sistemas corporativos nos setores de <strong>logística, varejo e indústria</strong>.
+              Comecei minha carreira como Analista de Suporte e evoluí para Sênior ao compreender que os melhores sistemas não são apenas estáveis—são <strong>invisíveis ao usuário final</strong>.
             </p>
-            <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Atuo com <strong>SQL, Oracle, Python, .NET</strong> e <strong>ERPs (SAP/Hybris)</strong>, além de metodologias ágeis como <strong>Scrum e Kanban</strong>. Tenho foco em garantir <strong>alta disponibilidade</strong>, <strong>otimizar processos</strong> e apoiar iniciativas de transformação digital.
-            </p> <br />
-            <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}><strong>Baixe meu CV completo acima ;D</strong></p>
+
+            <p className={`text-lg leading-relaxed mb-6 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+              Ao longo de 8+ anos em TI corporativa, aprendi que resolver problemas técnicos complexos é menos sobre ferramentas e mais sobre <strong>entender negócios</strong>. Isso me levou a especializar-me em sustentação inteligente, automação que liberta times, e arquiteturas que escalam.
+            </p>
+
+            <p className={`text-lg leading-relaxed mb-6 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+              Trabalho com <strong>SQL, Oracle, Python, .NET, SAP</strong> e ferramentas modernas de observabilidade (<strong>Grafana, Zabbix</strong>). Mas meu verdadeiro diferencial é transformar requisitos nebulosos em soluções precisas—seja através de <strong>BPMN/UML</strong> ou code robusto.
+            </p>
+
+            <p className={`text-lg leading-relaxed italic font-semibold text-blue-600 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
+              Buscam um Analista Sênior que não apenas resolve problemas, mas os <strong>previne</strong>? Vamos conversar.
+            </p>
           </div>
         </div>
       </section>
