@@ -219,7 +219,7 @@ export default function Portfolio() {
               Sou Analista de Sistemas e Suporte <strong>Pleno/Sênior</strong> com mais de 8 anos de experiência em análise, sustentação e integração de sistemas corporativos nos setores de <strong>logística, varejo e indústria</strong>.
             </p>
             <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Atuo com <strong>SQL, Oracle, Python, .NET</strong> e <strong>ERPs (SAP/Hybris)</strong>, além de metodologias ágeis como <strong>Scrum e Kanban</strong>. Tenho foco em garantir <strong>alta disponibilidade</strong>, <strong>otimizar processos</strong> e aplicar soluções inteligentes.
+              Atuo com <strong>SQL, Oracle, Python, .NET</strong> e <strong>ERPs (SAP/Hybris)</strong>, além de metodologias ágeis como <strong>Scrum e Kanban</strong>. Tenho foco em garantir <strong>alta disponibilidade</strong>, <strong>otimizar processos</strong> e apoiar iniciativas de transformação digital.
             </p> <br/>
             <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}><strong>Baixe meu CV completo acima ;D</strong></p>
           </div>
