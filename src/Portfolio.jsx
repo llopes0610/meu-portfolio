@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Send, Moon, Sun, ExternalLink, Mail, Phone, Linkedin, Code, Database, Zap, Layers, ChevronDown, MapPin, Download, ArrowRight, Instagram, Award, Briefcase, Target } from 'lucide-react';
+import { Menu, X, Send, Moon, Sun, ExternalLink, Mail, Phone, Linkedin, Code, Database, Zap, Layers, ChevronDown, MapPin, Download, ArrowRight, Instagram, Award, Briefcase, Target, Github } from 'lucide-react';
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(true);
@@ -37,100 +37,100 @@ export default function Portfolio() {
   ];
 
   const softSkills = [
-  { title: 'Liderança Técnica', description: 'Mentoria de times e condução de projetos críticos em ambientes corporativos' },
-  { title: 'Comunicação', description: 'Tradução clara de conceitos técnicos para stakeholders não-técnicos' },
-  { title: 'Resolução de Problemas', description: 'Análise profunda e soluções inovadoras para sistemas complexos' },
-  { title: 'Trabalho em Equipe', description: 'Colaboração efetiva com equipes multidisciplinares e agile' },
-  { title: 'Pensamento Estratégico', description: 'Visão de negócio alinhada com objetivos de transformação digital' },
-  { title: 'Adaptabilidade', description: 'Rápida aprendizagem em novas tecnologias e metodologias' },
-];
+    { title: 'Liderança Técnica', description: 'Mentoria de times e condução de projetos críticos em ambientes corporativos' },
+    { title: 'Comunicação', description: 'Tradução clara de conceitos técnicos para stakeholders não-técnicos' },
+    { title: 'Resolução de Problemas', description: 'Análise profunda e soluções inovadoras para sistemas complexos' },
+    { title: 'Trabalho em Equipe', description: 'Colaboração efetiva com equipes multidisciplinares e agile' },
+    { title: 'Pensamento Estratégico', description: 'Visão de negócio alinhada com objetivos de transformação digital' },
+    { title: 'Adaptabilidade', description: 'Rápida aprendizagem em novas tecnologias e metodologias' },
+  ];
 
-const projects = [
-  {
-    title: 'Otimização de Sistema de Pedidos - Carrefour',
-    company: 'Carrefour (2018-2019)',
-    description: 'Análise e resolução de gargalos na plataforma de e-commerce Hybris, resultando em melhoria significativa de performance.',
-    results: [
-      'Redução de 40% no tempo de processamento de pedidos',
-      'Diminuição de 60% nos erros de sincronização de estoque',
-      'Implementação de cache inteligente com Redis'
-    ],
-    technologies: ['Oracle', 'Hybris', 'SQL', 'Jira'],
-    impact: 'Alto impacto'
-  },
-  {
-    title: 'Automação de Processo de Importação SAP',
-    company: 'GAFOR Logística (2020-2021)',
-    description: 'Desenvolvimento de scripts automatizados para integração de dados entre sistemas legados e SAP MM, eliminando processamento manual.',
-    results: [
-      'Automação de 10+ processos manuais',
-      'Redução de 20 horas/mês em tarefas repetitivas',
-      'Zero erros em processamento de 50k registros mensais'
-    ],
-    technologies: ['Python', 'SAP', 'PL/SQL', 'Shell Scripts'],
-    impact: 'Muito alto impacto'
-  },
-  {
-    title: 'Infraestrutura de Monitoramento Avançado',
-    company: 'Strada (2022-2025)',
-    description: 'Implementação de stack completo de monitoramento e observabilidade para sistemas críticos de logística com alertas inteligentes.',
-    results: [
-      'Redução de 70% no MTTR (Mean Time To Repair)',
-      'Detecção proativa de 85% dos incidentes antes de impacto',
-      'Implementação de alertas inteligentes com machine learning'
-    ],
-    technologies: ['NewRelic', 'Zabbix', 'SQL', 'Grafana', 'Python'],
-    impact: 'Crítico'
-  }
-];
+  const projects = [
+    {
+      title: 'Otimização de Sistema de Pedidos - Carrefour',
+      company: 'Carrefour (2018-2019)',
+      description: 'Análise e resolução de gargalos na plataforma de e-commerce Hybris, resultando em melhoria significativa de performance.',
+      results: [
+        'Redução de 40% no tempo de processamento de pedidos',
+        'Diminuição de 60% nos erros de sincronização de estoque',
+        'Implementação de cache inteligente com Redis'
+      ],
+      technologies: ['Oracle', 'Hybris', 'SQL', 'Jira'],
+      impact: 'Alto impacto'
+    },
+    {
+      title: 'Automação de Processo de Importação SAP',
+      company: 'GAFOR Logística (2020-2021)',
+      description: 'Desenvolvimento de scripts automatizados para integração de dados entre sistemas legados e SAP MM, eliminando processamento manual.',
+      results: [
+        'Automação de 10+ processos manuais',
+        'Redução de 20 horas/mês em tarefas repetitivas',
+        'Zero erros em processamento de 50k registros mensais'
+      ],
+      technologies: ['Python', 'SAP', 'PL/SQL', 'Shell Scripts'],
+      impact: 'Muito alto impacto'
+    },
+    {
+      title: 'Infraestrutura de Monitoramento Avançado',
+      company: 'Strada (2022-2025)',
+      description: 'Implementação de stack completo de monitoramento e observabilidade para sistemas críticos de logística com alertas inteligentes.',
+      results: [
+        'Redução de 70% no MTTR (Mean Time To Repair)',
+        'Detecção proativa de 85% dos incidentes antes de impacto',
+        'Implementação de alertas inteligentes com machine learning'
+      ],
+      technologies: ['NewRelic', 'Zabbix', 'SQL', 'Grafana', 'Python'],
+      impact: 'Crítico'
+    }
+  ];
 
   const experience = [
-    { 
-      company: 'Strada', 
-      role: 'Analista de Suporte N3 / Analista de Sistemas', 
-      period: '2022 – 2025', 
+    {
+      company: 'Strada',
+      role: 'Analista de Suporte N3 / Analista de Sistemas',
+      period: '2022 – 2025',
       desc: [
-        'Resolução de incidentes críticos em aplicação de logística, garantindo alta disponibilidade', 
+        'Resolução de incidentes críticos em aplicação de logística, garantindo alta disponibilidade',
         'SQL, Oracle e NewRelic para análise de performance, logs e integridade de dados',
         'Documentação técnica e funcional (BPMN, UML)',
         'QA e testes automatizados, validação de GMUDs e acompanhamento de deploys',
         'Procedimentos técnicos preventivos que reduziram falhas e tempo de resposta'
       ]
     },
-    { 
-      company: 'Unitrading Logistics', 
-      role: 'Analista de TI Sênior', 
-      period: '2021 – 2022', 
+    {
+      company: 'Unitrading Logistics',
+      role: 'Analista de TI Sênior',
+      period: '2021 – 2022',
       desc: [
         'Levantamento detalhado de requisitos junto aos stakeholders',
         'Otimização de fluxos de negócio e processos internos',
         'Sustentação de sistemas críticos com alta disponibilidade'
       ]
     },
-    { 
-      company: 'GAFOR Logística', 
-      role: 'Analista de TI Pleno', 
-      period: '2020 – 2021', 
+    {
+      company: 'GAFOR Logística',
+      role: 'Analista de TI Pleno',
+      period: '2020 – 2021',
       desc: [
         'Integração de sistemas SAP com sistemas internos legados',
         'Automação de processos repetitivos através de scripts e procedures',
         'Geração de relatórios SQL complexos para análise de dados'
       ]
     },
-    { 
-      company: 'Carrefour', 
-      role: 'Analista de Sistemas', 
-      period: '2018 – 2019', 
+    {
+      company: 'Carrefour',
+      role: 'Analista de Sistemas',
+      period: '2018 – 2019',
       desc: [
         'Suporte N2 para plataforma de pedidos online',
         'Administração do ERP Hybris com gerenciamento de usuários',
         'Análise e resolução de inconsistências de dados'
       ]
     },
-    { 
-      company: 'JBS', 
-      role: 'Analista de Suporte SAP', 
-      period: '2015 – 2018', 
+    {
+      company: 'JBS',
+      role: 'Analista de Suporte SAP',
+      period: '2015 – 2018',
       desc: [
         'Sustentação de sistemas SAP em produção',
         'Monitoramento através de ferramentas como Zabbix',
@@ -152,7 +152,7 @@ const projects = [
       <nav className={`fixed w-full z-50 transition-all backdrop-blur-md ${isScrolled ? (isDark ? 'bg-gray-950/80 border-b border-gray-800' : 'bg-white/80 border-b border-gray-200') : 'bg-transparent'}`}>
         <div className="w-full px-4 py-4 flex justify-between items-center max-w-7xl mx-auto">
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Soli Deo Gloria</div>
-          
+
           <div className="hidden md:flex gap-8 items-center">
             {['Sobre', 'Competências', 'Soft Skills', 'Projetos', 'Experiência', 'Formação', 'Contato'].map(item => (
               <a key={item} href={`#${item.toLowerCase()}`} className="text-sm font-medium hover:text-blue-500 transition-colors">{item}</a>
@@ -189,9 +189,9 @@ const projects = [
             <div className="flex justify-center md:justify-end order-2 md:order-1">
               <div className="relative w-56 h-56 md:w-72 md:h-72">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
-                <img 
-                  src="/lucas-perfil.jpg" 
-                  alt="Lucas Silva Lopes" 
+                <img
+                  src="/lucas-perfil.jpg"
+                  alt="Lucas Silva Lopes"
                   className="relative w-full h-full object-cover rounded-full border-4 border-blue-600 shadow-2xl"
                 />
               </div>
@@ -212,20 +212,28 @@ const projects = [
                 "Transformo sistemas complexos em soluções estáveis, eficientes e escaláveis."
               </p>
 
-              <div className={`flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                <div className="flex items-center gap-2 justify-center sm:justify-start">
-                  <Mail className="w-4 h-4 text-blue-600" />
-                  <a href="mailto:lucaslopes.ti@live.com" className="hover:text-blue-600">lucaslopes.ti@live.com</a>
-                </div>
-                <div className="flex items-center gap-2 justify-center sm:justify-start">
-                  <Phone className="w-4 h-4 text-blue-600" />
-                  <a href="tel:+5511987079347" className="hover:text-blue-600">+55 (11) 98707-9347</a>
-                </div>
-                <div className="flex items-center gap-2 justify-center sm:justify-start">
-                  <Instagram className="w-4 h-4 text-blue-600" />
-                  <a href="https://www.instagram.com/lucas5sola/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">@lucas5sola</a>
-                </div>
-              </div>
+              <div className={`flex flex-col gap-2 mb-8 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+  <div className="flex flex-wrap gap-3">
+    <div className="flex items-center gap-2">
+      <Mail className="w-4 h-4 text-blue-600" />
+      <a href="mailto:lucaslopes.ti@live.com">lucaslopes.ti@live.com</a>
+    </div>
+    <div className="flex items-center gap-2">
+      <Phone className="w-4 h-4 text-blue-600" />
+      <a href="tel:+5511987079347">+55 (11) 98707-9347</a>
+    </div>
+  </div>
+  <div className="flex flex-wrap gap-3">
+    <div className="flex items-center gap-2">
+      <Instagram className="w-4 h-4 text-blue-600" />
+      <a href="https://www.instagram.com/lucas5sola/" target="_blank" rel="noopener noreferrer">@lucas5sola</a>
+    </div>
+    <div className="flex items-center gap-2">
+      <Github className="w-4 h-4 text-blue-600" />
+      <a href="https://github.com/llopes0610" target="_blank" rel="noopener noreferrer">github.com/llopes0610</a>
+    </div>
+  </div>
+</div>
 
               <div className="flex flex-wrap gap-2 md:gap-4 justify-center md:justify-start">
                 <a href="https://www.linkedin.com/in/lucasslopes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl !text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
@@ -267,7 +275,7 @@ const projects = [
             </p>
             <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               Atuo com <strong>SQL, Oracle, Python, .NET</strong> e <strong>ERPs (SAP/Hybris)</strong>, além de metodologias ágeis como <strong>Scrum e Kanban</strong>. Tenho foco em garantir <strong>alta disponibilidade</strong>, <strong>otimizar processos</strong> e apoiar iniciativas de transformação digital.
-            </p> <br/>
+            </p> <br />
             <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}><strong>Baixe meu CV completo acima ;D</strong></p>
           </div>
         </div>
@@ -297,66 +305,66 @@ const projects = [
       </section>
 
       {/* Soft Skills Section */}
-<section id="soft skills" className={`py-20 px-4 w-screen ${sectionBgClass}`}>
-  <div className="w-full max-w-6xl mx-auto">
-    <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Competências Comportamentais</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {softSkills.map((skill, idx) => (
-        <div key={idx} className={`${cardBgClass} backdrop-blur-sm p-6 rounded-xl border ${borderClass} transition-all hover:shadow-lg`}>
-          <div className="flex items-start gap-3 mb-3">
-            <Award className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-            <h3 className="font-bold text-lg">{skill.title}</h3>
-          </div>
-          <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{skill.description}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-{/* Projects Section */}
-<section id="projetos" className="py-20 px-4 w-screen">
-  <div className="w-full max-w-6xl mx-auto">
-    <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Projetos Destaque</h2>
-    <div className="space-y-6">
-      {projects.map((project, idx) => (
-        <div key={idx} className={`${cardBgClass} backdrop-blur-sm p-6 md:p-8 rounded-xl border-l-4 border-blue-600 transition-all hover:shadow-lg`}>
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <Briefcase className="w-5 h-5 text-blue-600" />
-                <h3 className="text-2xl font-bold">{project.title}</h3>
+      <section id="soft skills" className={`py-20 px-4 w-screen ${sectionBgClass}`}>
+        <div className="w-full max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Competências Comportamentais</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {softSkills.map((skill, idx) => (
+              <div key={idx} className={`${cardBgClass} backdrop-blur-sm p-6 rounded-xl border ${borderClass} transition-all hover:shadow-lg`}>
+                <div className="flex items-start gap-3 mb-3">
+                  <Award className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <h3 className="font-bold text-lg">{skill.title}</h3>
+                </div>
+                <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{skill.description}</p>
               </div>
-              <p className="text-blue-600 font-semibold text-sm">{project.company}</p>
-            </div>
-            <span className="inline-block bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold mt-2 md:mt-0">{project.impact}</span>
-          </div>
-          <p className={`text-base mb-4 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{project.description}</p>
-          
-          <div className="mb-4">
-            <h4 className="font-bold mb-2 text-sm">Resultados Alcançados:</h4>
-            <ul className={`space-y-1 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              {project.results.map((result, i) => (
-                <li key={i} className="text-sm flex items-start gap-2">
-                  <Target className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span>{result}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech, i) => (
-              <span key={i} className="bg-blue-600/20 text-blue-600 px-2 py-1 rounded text-xs font-semibold">
-                {tech}
-              </span>
             ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projetos" className="py-20 px-4 w-screen">
+        <div className="w-full max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Projetos Destaque</h2>
+          <div className="space-y-6">
+            {projects.map((project, idx) => (
+              <div key={idx} className={`${cardBgClass} backdrop-blur-sm p-6 md:p-8 rounded-xl border-l-4 border-blue-600 transition-all hover:shadow-lg`}>
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Briefcase className="w-5 h-5 text-blue-600" />
+                      <h3 className="text-2xl font-bold">{project.title}</h3>
+                    </div>
+                    <p className="text-blue-600 font-semibold text-sm">{project.company}</p>
+                  </div>
+                  <span className="inline-block bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold mt-2 md:mt-0">{project.impact}</span>
+                </div>
+                <p className={`text-base mb-4 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{project.description}</p>
+
+                <div className="mb-4">
+                  <h4 className="font-bold mb-2 text-sm">Resultados Alcançados:</h4>
+                  <ul className={`space-y-1 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                    {project.results.map((result, i) => (
+                      <li key={i} className="text-sm flex items-start gap-2">
+                        <Target className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span>{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech, i) => (
+                    <span key={i} className="bg-blue-600/20 text-blue-600 px-2 py-1 rounded text-xs font-semibold">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Experience Section */}
       <section id="experiência" className={`py-20 px-4 w-screen ${sectionBgClass}`}>
@@ -413,7 +421,7 @@ const projects = [
                   <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                   <span><strong>MCSA Windows Server 2012</strong> — Green Treinamentos (2015)</span>
                 </li>
-                 <li className="flex items-center gap-3">
+                <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                   <span><strong>ITIL V3</strong> — Impacta (2015)</span>
                 </li>
