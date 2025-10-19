@@ -180,17 +180,17 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className={`md:hidden ${sectionBgClass} px-4 py-4 flex flex-col gap-4 border-t ${borderClass}`}>
-              {['Sobre', 'Competências', 'Soft Skills', 'Projetos', 'Experiência', 'Formação', 'Contato'].map(item => (
-                <a key={item} href={`#${item.toLowerCase()}`} className={`${isDark ? 'text-emerald-400 hover:text-emerald-300' : 'text-emerald-600 hover:text-emerald-700'} transition-colors font-medium`} onClick={() => setIsMenuOpen(false)}>
-                  {item}
-                </a>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
+       <AnimatePresence>
+  {isMenuOpen && (
+    <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className={`md:hidden ${isDark ? 'bg-slate-800 border-slate-700' : sectionBgClass} px-4 py-4 flex flex-col gap-4 border-t`}>
+      {['Sobre', 'Competências', 'Soft Skills', 'Projetos', 'Experiência', 'Formação', 'Contato'].map(item => (
+        <a key={item} href={`#${item.toLowerCase()}`} className={`${isDark ? 'text-emerald-300 hover:text-emerald-200' : 'text-emerald-600 hover:text-emerald-700'} transition-colors font-medium`} onClick={() => setIsMenuOpen(false)}>
+          {item}
+        </a>
+      ))}
+    </motion.div>
+  )}
+</AnimatePresence>
       </nav>
 
       {/* Hero Section */}
