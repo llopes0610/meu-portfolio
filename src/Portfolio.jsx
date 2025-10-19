@@ -174,23 +174,23 @@ export default function Portfolio() {
             <motion.button whileHover={{ scale: 1.1 }} onClick={() => setIsDark(!isDark)} className={`p-2 rounded-full ${isDark ? '' : 'hover:bg-gray-200'} transition-colors`}>
               {isDark ? <Sun className="w-5 h-5 text-emerald-400" /> : <Moon className="w-5 h-5 text-gray-700" />}
             </motion.button>
-            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={() => setIsMenuOpen(!isMenuOpen)} className={`p-2 rounded-full transition-colors ${isDark ? 'text-white hover:bg-slate-700' : 'text-gray-800 hover:bg-gray-200'}`}>
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </motion.button>
           </div>
         </div>
 
-       <AnimatePresence>
-  {isMenuOpen && (
-    <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className={`md:hidden ${isDark ? 'bg-slate-800 border-slate-700' : sectionBgClass} px-4 py-4 flex flex-col gap-4 border-t`}>
-      {['Sobre', 'Competências', 'Soft Skills', 'Projetos', 'Experiência', 'Formação', 'Contato'].map(item => (
-        <a key={item} href={`#${item.toLowerCase()}`} className={`${isDark ? 'text-emerald-300 hover:text-emerald-200' : 'text-emerald-600 hover:text-emerald-700'} transition-colors font-medium`} onClick={() => setIsMenuOpen(false)}>
-          {item}
-        </a>
-      ))}
-    </motion.div>
-  )}
-</AnimatePresence>
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className={`md:hidden ${isDark ? 'bg-slate-800 border-slate-700' : sectionBgClass} px-4 py-4 flex flex-col gap-4 border-t`}>
+              {['Sobre', 'Competências', 'Soft Skills', 'Projetos', 'Experiência', 'Formação', 'Contato'].map(item => (
+                <a key={item} href={`#${item.toLowerCase()}`} className={`${isDark ? 'text-emerald-300 hover:text-emerald-200' : 'text-emerald-600 hover:text-emerald-700'} transition-colors font-medium`} onClick={() => setIsMenuOpen(false)}>
+                  {item}
+                </a>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       {/* Hero Section */}
