@@ -174,8 +174,12 @@ export default function Portfolio() {
             <motion.button whileHover={{ scale: 1.1 }} onClick={() => setIsDark(!isDark)} className={`p-2 rounded-full transition-colors border ${isDark ? 'hover:bg-emerald-500/10 border-emerald-500/30' : 'hover:bg-gray-200 border-gray-300'}`}>
               {isDark ? <Sun className="w-5 h-5 text-emerald-400" /> : <Moon className="w-5 h-5 text-gray-700" />}
             </motion.button>
-            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={() => setIsMenuOpen(!isMenuOpen)} className={`p-2 rounded-full transition-colors border ${isDark ? 'hover:bg-emerald-500/10 border-emerald-500/30 text-white' : 'hover:bg-gray-200 border-gray-300 text-gray-800'}`}>
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? (
+                <X className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#1f2937' }} />
+              ) : (
+                <Menu className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#1f2937' }} />
+              )}
             </motion.button>
           </div>
         </div>
