@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Send, Moon, Sun, ExternalLink, Mail, Phone, Linkedin, Code, Database, Zap, Layers, ChevronDown, MapPin, Download, ArrowRight, Instagram, Award, Briefcase, Target, Github } from 'lucide-react';
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,10 +25,10 @@ export default function Portfolio() {
     setFormData({ name: '', email: '', message: '' });
   };
 
-  const bgClass = isDark ? 'bg-gray-950 text-gray-100' : 'bg-white text-gray-900';
-  const sectionBgClass = isDark ? 'bg-gray-900' : 'bg-gradient-to-b from-blue-50 to-white';
-  const cardBgClass = isDark ? 'bg-gray-800/50 hover:bg-gray-800' : 'bg-white/50 hover:bg-white';
-  const borderClass = isDark ? 'border-gray-700' : 'border-gray-200';
+  const bgClass = isDark ? 'bg-slate-950 text-gray-100' : 'bg-gray-50 text-gray-900';
+  const sectionBgClass = isDark ? 'bg-slate-900' : 'bg-gradient-to-b from-gray-100 to-gray-50';
+  const cardBgClass = isDark ? 'bg-gradient-to-br from-slate-800 to-slate-900' : 'bg-white border border-gray-200';
+  const borderClass = isDark ? 'border-emerald-500/30' : 'border-gray-300';
 
   const skills = [
     { icon: <Database className="w-6 h-6" />, title: 'Bancos de Dados', items: ['SQL', 'Oracle', 'PL/SQL'] },
@@ -150,37 +151,46 @@ export default function Portfolio() {
 
   return (
     <div className={`${bgClass} transition-colors duration-300 min-h-screen w-full overflow-x-hidden`}>
-      {/* Navbar */}
+      {/* Navbar CORRIGIDA */}
       <nav className={`fixed w-full z-50 transition-all backdrop-blur-md ${isScrolled ? (isDark ? 'bg-gray-950/80 border-b border-gray-800' : 'bg-white/80 border-b border-gray-200') : 'bg-transparent'}`}>
         <div className="w-full px-4 py-4 flex justify-between items-center max-w-7xl mx-auto">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Soli Deo Gloria</div>
+          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            Soli Deo Gloria
+          </div>
 
+          {/* ✅ Agora está DENTRO da div pai */}
           <div className="hidden md:flex gap-8 items-center">
             {['Sobre', 'Competências', 'Soft Skills', 'Projetos', 'Experiência', 'Formação', 'Contato'].map(item => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="text-sm font-medium hover:text-blue-500 transition-colors">{item}</a>
+              <a key={item} href={`#${item.toLowerCase()}`} className={`text-sm font-medium ${isDark ? 'text-gray-300 hover:text-emerald-500' : 'text-gray-700 hover:text-emerald-600'} transition-colors`}>
+                {item}
+              </a>
             ))}
-            <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-700">
-              {isDark ? <Sun className="w-5 h-5 text-yellow-400" /> : <Moon className="w-5 h-5 text-gray-700" />}
-            </button>
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={() => setIsDark(!isDark)} className={`p-2 rounded-full transition-colors border ${isDark ? 'hover:bg-emerald-500/10 border-emerald-500/30' : 'hover:bg-gray-200 border-gray-300'}`}>
+              {isDark ? <Sun className="w-5 h-5 text-emerald-400" /> : <Moon className="w-5 h-5 text-gray-700" />}
+            </motion.button>
           </div>
 
           <div className="md:hidden flex items-center gap-4">
-            <button onClick={() => setIsDark(!isDark)} className="p-2">
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <motion.button whileHover={{ scale: 1.1 }} onClick={() => setIsDark(!isDark)} className={`p-2 rounded-full ${isDark ? '' : 'hover:bg-gray-200'} transition-colors`}>
+              {isDark ? <Sun className="w-5 h-5 text-emerald-400" /> : <Moon className="w-5 h-5 text-gray-700" />}
+            </motion.button>
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            </motion.button>
           </div>
         </div>
 
-        {isMenuOpen && (
-          <div className={`md:hidden ${sectionBgClass} px-4 py-4 flex flex-col gap-4 border-t ${borderClass}`}>
-            {['Sobre', 'Competências', 'Experiência', 'Formação', 'Contato'].map(item => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-blue-500" onClick={() => setIsMenuOpen(false)}>{item}</a>
-            ))}
-          </div>
-        )}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className={`md:hidden ${sectionBgClass} px-4 py-4 flex flex-col gap-4 border-t ${borderClass}`}>
+              {['Sobre', 'Competências', 'Soft Skills', 'Projetos', 'Experiência', 'Formação', 'Contato'].map(item => (
+                <a key={item} href={`#${item.toLowerCase()}`} className={`${isDark ? 'text-emerald-400 hover:text-emerald-300' : 'text-emerald-600 hover:text-emerald-700'} transition-colors font-medium`} onClick={() => setIsMenuOpen(false)}>
+                  {item}
+                </a>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       {/* Hero Section */}
