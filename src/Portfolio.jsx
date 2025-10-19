@@ -171,10 +171,10 @@ export default function Portfolio() {
           </div>
 
           <div className="md:hidden flex items-center gap-4">
-            <motion.button whileHover={{ scale: 1.1 }} onClick={() => setIsDark(!isDark)} className={`p-2 rounded-full ${isDark ? '' : 'hover:bg-gray-200'} transition-colors`}>
-              {isDark ? <Sun className="w-5 h-5 text-emerald-400" /> : <Moon className="w-5 h-5 text-gray-700" />}
+            <motion.button whileHover={{ scale: 1.1 }} onClick={() => setIsDark(!isDark)} className={`p-2 rounded-full ${isDark ? 'text-emerald-400 hover:bg-slate-700' : 'text-gray-700 hover:bg-gray-200'}`}>
+              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </motion.button>
-            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={() => setIsMenuOpen(!isMenuOpen)} className={`p-2 rounded-full transition-colors ${isDark ? 'text-white hover:bg-slate-700' : 'text-gray-800 hover:bg-gray-200'}`}>
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={() => setIsMenuOpen(!isMenuOpen)} className={`p-2 rounded-full ${isDark ? 'text-white hover:bg-slate-700 border border-slate-600' : 'text-gray-800 hover:bg-gray-200'}`}>
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </motion.button>
           </div>
