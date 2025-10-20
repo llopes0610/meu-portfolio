@@ -36,7 +36,9 @@ export default function Portfolio() {
     { icon: <Zap className="w-6 h-6" />, title: 'Sustentação', items: ['Incidentes Críticos', 'Performance', 'QA'] },
     { icon: <Layers className="w-6 h-6" />, title: 'Ferramentas', items: ['SAP', 'Jira', 'NewRelic', 'Elasticsearch', 'Grafana', 'Zendesk'] },
     { icon: <Award className="w-6 h-6" />, title: 'Metodologias', items: ['Scrum', 'Kanban', 'Agile'] },
+    { icon: <Layers className="w-6 h-6" />, title: 'Integração & APIs', items: ['REST APIs', 'RabbitMQ', 'Postman', 'Webhooks', 'gRPC', 'SOAP'] },
     { icon: <Code className="w-6 h-6" />, title: 'Modelagem', items: ['BPMN', 'UML', 'Documentação'] },
+    
   ];
 
   const softSkills = [
