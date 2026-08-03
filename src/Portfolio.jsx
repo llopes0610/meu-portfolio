@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Send, Moon, Sun, ExternalLink, Mail, Phone, Linkedin, Code, Database, Zap, Layers, ChevronDown, MapPin, Download, ArrowRight, Instagram, Award, Briefcase, Target, Github } from 'lucide-react';
+import { Menu, X, Send, Moon, Sun, ExternalLink, Mail, Phone, Linkedin, Code, Database, Zap, Layers, ChevronDown, MapPin, Download, ArrowRight, Instagram, Award, Briefcase, Target, Github, Settings, GitBranch } from 'lucide-react';
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(true);
@@ -20,7 +20,7 @@ export default function Portfolio() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const mailto = `mailto:lucaslopes.ti@live.com?subject=Contato de ${formData.name}&body=${formData.message}`;
+    const mailto = `mailto:llopes3025@gmail.com?subject=Contato de ${formData.name}&body=${formData.message}`;
     window.location.href = mailto;
     setFormData({ name: '', email: '', message: '' });
   };
@@ -31,124 +31,151 @@ export default function Portfolio() {
   const borderClass = isDark ? 'border-emerald-500/30' : 'border-gray-300';
 
   const skills = [
-    { icon: <Database className="w-6 h-6" />, title: 'Bancos de Dados', items: ['SQL', 'Oracle', 'PL/SQL'] },
-    { icon: <Code className="w-6 h-6" />, title: 'Programação', items: ['.NET', 'Python', 'Shell Scripts'] },
-    { icon: <Zap className="w-6 h-6" />, title: 'Sustentação', items: ['Incidentes Críticos', 'Performance', 'QA'] },
-    { icon: <Layers className="w-6 h-6" />, title: 'Ferramentas', items: ['SAP', 'Jira', 'NewRelic', 'Elasticsearch', 'Grafana', 'Zendesk'] },
-    { icon: <Award className="w-6 h-6" />, title: 'Metodologias', items: ['Scrum', 'Kanban', 'Agile'] },
-    { icon: <Layers className="w-6 h-6" />, title: 'Integração & APIs', items: ['REST APIs', 'RabbitMQ', 'Postman', 'Webhooks', 'gRPC', 'SOAP'] },
-    { icon: <Code className="w-6 h-6" />, title: 'Modelagem', items: ['BPMN', 'UML', 'Documentação'] },
-    
+    { icon: <Code className="w-6 h-6" />, title: 'Desenvolvimento', items: ['JavaScript', '.NET', 'Python', 'React'] },
+    { icon: <Database className="w-6 h-6" />, title: 'Bancos de Dados', items: ['SQL Server', 'Oracle', 'PL/SQL', 'PostgreSQL'] },
+    { icon: <Settings className="w-6 h-6" />, title: 'Sistemas', items: ['Implantação', 'Configuração', 'Sustentação', 'Homologação'] },
+    { icon: <Zap className="w-6 h-6" />, title: 'Suporte & QA', items: ['Incidentes críticos', 'Análise de logs', 'Testes', 'GMUDs'] },
+    { icon: <GitBranch className="w-6 h-6" />, title: 'Agilidade & DevOps', items: ['Azure DevOps', 'Scrum', 'Kanban', 'Sprints'] },
+    { icon: <Layers className="w-6 h-6" />, title: 'Integrações', items: ['REST', 'SOAP', 'RabbitMQ', 'Kafka'] },
+    { icon: <Award className="w-6 h-6" />, title: 'Observabilidade', items: ['New Relic', 'Zabbix', 'Grafana', 'Datadog'] },
+    { icon: <Code className="w-6 h-6" />, title: 'Análise Funcional', items: ['Requisitos', 'BPMN', 'UML', 'Documentação'] },
   ];
 
   const softSkills = [
-    { title: 'Liderança Técnica', description: 'Mentoria de times e condução de projetos críticos em ambientes corporativos' },
-    { title: 'Comunicação', description: 'Tradução clara de conceitos técnicos para stakeholders não-técnicos' },
-    { title: 'Resolução de Problemas', description: 'Análise profunda e soluções inovadoras para sistemas complexos' },
-    { title: 'Trabalho em Equipe', description: 'Colaboração efetiva com equipes multidisciplinares e agile' },
-    { title: 'Pensamento Estratégico', description: 'Visão de negócio alinhada com objetivos de transformação digital' },
-    { title: 'Adaptabilidade', description: 'Rápida aprendizagem em novas tecnologias e metodologias' },
+    { title: 'Comunicação com o negócio', description: 'Condução de reuniões, entendimento das necessidades dos usuários e tradução de demandas em requisitos técnicos e funcionais.' },
+    { title: 'Resolução de problemas', description: 'Investigação estruturada de incidentes, análise de causa e definição de soluções sustentáveis para sistemas corporativos.' },
+    { title: 'Visão de processos', description: 'Compreensão do fluxo ponta a ponta para apoiar implantações, melhorias, homologações e integrações.' },
+    { title: 'Colaboração multidisciplinar', description: 'Atuação próxima a desenvolvimento, produto, infraestrutura, fornecedores e áreas usuárias.' },
+    { title: 'Organização e priorização', description: 'Gestão de demandas, acompanhamento de sprints e controle de entregas conforme criticidade e prazo.' },
+    { title: 'Adaptabilidade', description: 'Experiência em diferentes setores e rápida assimilação de regras de negócio, tecnologias e ambientes.' },
   ];
 
   const projects = [
     {
-      title: 'Otimização de Sistema de Pedidos - Carrefour',
-      company: 'Carrefour (2018-2019)',
-      description: 'Análise e resolução de gargalos na plataforma de e-commerce Hybris, resultando em melhoria significativa de performance.',
+      title: 'Implantação de Sistemas na PRODAM-SP',
+      company: 'CRP Tecnologia | 2026 – Atual',
+      description: 'Atuação como Analista de Sistemas Pleno em projeto de implantação e evolução de sistemas para a PRODAM-SP, conectando áreas de negócio, times técnicos e fornecedores.',
       results: [
-        'Redução de 40% no tempo de processamento de pedidos',
-        'Diminuição de 60% nos erros de sincronização de estoque',
-        'Implementação de cache inteligente com Redis'
+        'Condução de reuniões de entendimento e levantamento de requisitos técnicos e funcionais',
+        'Configuração e ajustes de regras de sistemas utilizando JavaScript e SQL Server',
+        'Acompanhamento de sprints, backlog, testes, homologações e entregas pelo Azure DevOps'
       ],
-      technologies: ['Oracle', 'Hybris', 'SQL', 'Jira'],
-      impact: 'Alto impacto'
+      technologies: ['JavaScript', 'SQL Server', 'Azure DevOps', 'Scrum', 'Implantação'],
+      impact: 'Projeto atual'
     },
     {
-      title: 'Automação de Processo de Importação SAP',
-      company: 'GAFOR Logística (2020-2021)',
-      description: 'Desenvolvimento de scripts automatizados para integração de dados entre sistemas legados e SAP MM, eliminando processamento manual.',
+      title: 'Sustentação de Plataforma Logística',
+      company: 'Strada | 2022 – 2025',
+      description: 'Sustentação N3 de aplicação crítica de logística, com análise de incidentes, dados, performance e acompanhamento de mudanças em produção.',
       results: [
-        'Automação de 10+ processos manuais',
-        'Redução de 20 horas/mês em tarefas repetitivas',
-        'Zero erros em processamento de 50k registros mensais'
+        'Análise de logs, performance e integridade de dados com SQL, Oracle e New Relic',
+        'Validação de GMUDs, acompanhamento de deploys e execução de testes',
+        'Produção de documentação técnica e funcional em BPMN e UML'
       ],
-      technologies: ['Python', 'SAP', 'PL/SQL', 'Shell Scripts'],
-      impact: 'Muito alto impacto'
+      technologies: ['SQL', 'Oracle', 'New Relic', 'QA', 'BPMN', 'UML'],
+      impact: 'Sistema crítico'
     },
     {
-      title: 'Infraestrutura de Monitoramento Avançado',
-      company: 'Strada (2022-2025)',
-      description: 'Implementação de stack completo de monitoramento e observabilidade para sistemas críticos de logística com alertas inteligentes.',
+      title: 'Integração e Sustentação de Sistemas Corporativos',
+      company: 'GAFOR, Unitrading, Carrefour e JBS',
+      description: 'Experiência em sustentação, integração e melhoria de sistemas corporativos nos segmentos de logística, varejo e indústria.',
       results: [
-        'Redução de 70% no MTTR (Mean Time To Repair)',
-        'Detecção proativa de 85% dos incidentes antes de impacto',
-        'Implementação de alertas inteligentes com machine learning'
+        'Suporte e melhorias em SAP, Hybris, PDV e sistemas internos',
+        'Levantamento de requisitos e integração entre áreas de negócio e TI',
+        'Consultas SQL, monitoramento e atendimento orientado a SLA'
       ],
-      technologies: ['NewRelic', 'Zabbix', 'SQL', 'Grafana', 'Python'],
-      impact: 'Crítico'
+      technologies: ['SAP', 'Hybris', 'SQL', 'Zabbix', 'Jira', 'Service Desk'],
+      impact: 'Experiência consolidada'
     }
   ];
 
   const experience = [
     {
+      company: 'CRP Tecnologia',
+      role: 'Analista de Sistemas Pleno — Projeto PRODAM-SP',
+      period: 'mai/2026 – atual',
+      desc: [
+        'Atuação na implantação, configuração e evolução de sistemas corporativos para a PRODAM-SP',
+        'Condução de reuniões com áreas técnicas e de negócio para entendimento de processos e levantamento de requisitos',
+        'Análise e documentação de requisitos técnicos e funcionais, regras de negócio e cenários de uso',
+        'Configuração e ajustes de sistemas utilizando JavaScript e SQL Server',
+        'Criação de consultas, validações, correções e análises de dados em SQL Server',
+        'Acompanhamento de backlog, sprints, atividades e entregas por meio do Azure DevOps',
+        'Apoio a testes integrados, homologações, implantações e análise de incidentes pós-entrega',
+        'Interface entre usuários, equipe de desenvolvimento, fornecedores e demais stakeholders'
+      ]
+    },
+    {
+      company: 'JD Consultores',
+      role: 'Analista de Projetos e Implantação',
+      period: 'nov/2025 – abr/2026',
+      desc: [
+        'Acompanhamento de projetos e atividades de implantação de sistemas',
+        'Interface com usuários e equipes técnicas para entendimento e organização das demandas',
+        'Apoio a testes, validações, documentação e acompanhamento de entregas'
+      ]
+    },
+    {
       company: 'Strada',
       role: 'Analista de Suporte N3 / Analista de Sistemas',
-      period: '2022 – 2025',
+      period: 'dez/2022 – set/2025',
       desc: [
-        'Resolução de incidentes críticos em aplicação de logística, garantindo alta disponibilidade',
-        'SQL, Oracle e NewRelic para análise de performance, logs e integridade de dados',
-        'Documentação técnica e funcional (BPMN, UML)',
-        'QA e testes automatizados, validação de GMUDs e acompanhamento de deploys',
-        'Procedimentos técnicos preventivos que reduziram falhas e tempo de resposta'
+        'Resolução de incidentes críticos em aplicação de logística, garantindo a disponibilidade do sistema',
+        'Uso de SQL, Oracle e New Relic para análise de performance, logs e integridade de dados',
+        'Documentação técnica e funcional com BPMN e UML',
+        'QA, testes, validação de GMUDs e acompanhamento de deploys',
+        'Integração com áreas de negócio, produto e engenharia'
       ]
     },
     {
       company: 'Unitrading Logistics',
-      role: 'Analista de TI Sênior',
-      period: '2021 – 2022',
+      role: 'Analista de TI Sênior / Analista de Sistemas',
+      period: 'nov/2021 – mai/2022',
       desc: [
-        'Levantamento detalhado de requisitos junto aos stakeholders',
-        'Otimização de fluxos de negócio e processos internos',
-        'Sustentação de sistemas críticos com alta disponibilidade'
+        'Levantamento e análise de requisitos junto a usuários-chave',
+        'Sustentação e suporte a aplicações críticas da operação',
+        'Consultas SQL para extração e análise de dados',
+        'Integração entre áreas de negócio e TI'
       ]
     },
     {
       company: 'GAFOR Logística',
-      role: 'Analista de TI Pleno',
-      period: '2020 – 2021',
+      role: 'Analista de TI Pleno / Analista de Sistemas',
+      period: 'out/2020 – set/2021',
       desc: [
-        'Integração de sistemas SAP com sistemas internos legados',
-        'Automação de processos repetitivos através de scripts e procedures',
-        'Geração de relatórios SQL complexos para análise de dados'
+        'Suporte e melhorias em ERP SAP e sistemas internos',
+        'Levantamento de requisitos para processos logísticos',
+        'Consultas SQL, relatórios e integração de sistemas internos e externos'
       ]
     },
     {
       company: 'Carrefour',
       role: 'Analista de Sistemas',
-      period: '2018 – 2019',
+      period: 'mai/2018 – fev/2019',
       desc: [
-        'Suporte N2 para plataforma de pedidos online',
-        'Administração do ERP Hybris com gerenciamento de usuários',
-        'Análise e resolução de inconsistências de dados'
+        'Suporte N2 a pedidos online e integração com ERP Hybris',
+        'Monitoramento de SLA e análise de inconsistências em pedidos',
+        'Gestão de demandas por meio do Jira'
       ]
     },
     {
       company: 'JBS',
-      role: 'Analista de Suporte SAP',
-      period: '2015 – 2018',
+      role: 'Analista de Suporte SAP / Analista de Sistemas',
+      period: 'set/2015 – jan/2018',
       desc: [
-        'Sustentação de sistemas SAP em produção',
-        'Monitoramento através de ferramentas como Zabbix',
-        'Geração de relatórios técnicos para a administração'
+        'Suporte e sustentação a sistemas SAP e PDV',
+        'Monitoramento via Zabbix em ambientes críticos',
+        'Atendimento via Service Desk com foco em SLAs'
       ]
     }
   ];
 
   const education = [
-    { course: 'Inteligência Artificial e Automação Digital', institution: 'Unifecaf e RocketSeat', period: '2025–2026' },
-    { course: 'Desenvolvimento de Software FullStack', institution: 'Cubos Academy', period: '2024–2025' },
-    { course: 'Engenharia de Dados', institution: 'Data Science Academy', period: '2022–2023' },
-    { course: 'Análise e Desenvolvimento de Sistemas', institution: 'Universidade Anhembi Morumbi', period: '2018–2020' },
+    { course: 'Graduação em Inteligência Artificial e Automação Digital', institution: 'UniFECAF', period: '2025 – 2027' },
+    { course: 'Análise e Desenvolvimento de Sistemas', institution: 'Universidade Anhembi Morumbi', period: '2018 – 2020' },
+    { course: 'Product Manager', institution: 'EBAC', period: '2025 – 2026' },
+    { course: 'Desenvolvimento de Software FullStack', institution: 'Cubos Academy', period: '2024 – 2025' },
+    { course: 'Engenharia de Dados', institution: 'Data Science Academy', period: '2022 – 2023' },
   ];
 
   return (
@@ -163,7 +190,7 @@ export default function Portfolio() {
           {/* ✅ Agora está DENTRO da div pai */}
           <div className="hidden md:flex gap-8 items-center">
             {['Sobre', 'Competências', 'Soft Skills', 'Projetos', 'Experiência', 'Formação', 'Contato'].map(item => (
-              <a key={item} href={`#${item.toLowerCase()}`} className={`text-sm font-medium ${isDark ? 'text-gray-300 hover:text-emerald-500' : 'text-gray-700 hover:text-emerald-600'} transition-colors`}>
+              <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} className={`text-sm font-medium ${isDark ? 'text-gray-300 hover:text-emerald-500' : 'text-gray-700 hover:text-emerald-600'} transition-colors`}>
                 {item}
               </a>
             ))}
@@ -204,7 +231,7 @@ export default function Portfolio() {
           {isMenuOpen && (
             <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className={`md:hidden ${isDark ? 'bg-slate-800 border-slate-700' : sectionBgClass} px-4 py-4 flex flex-col gap-4 border-t`}>
               {['Sobre', 'Competências', 'Soft Skills', 'Projetos', 'Experiência', 'Formação', 'Contato'].map(item => (
-                <a key={item} href={`#${item.toLowerCase()}`} className={`${isDark ? 'text-emerald-300 hover:text-emerald-200' : 'text-emerald-600 hover:text-emerald-700'} transition-colors font-medium`} onClick={() => setIsMenuOpen(false)}>
+                <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} className={`${isDark ? 'text-emerald-300 hover:text-emerald-200' : 'text-emerald-600 hover:text-emerald-700'} transition-colors font-medium`} onClick={() => setIsMenuOpen(false)}>
                   {item}
                 </a>
               ))}
@@ -235,20 +262,20 @@ export default function Portfolio() {
                 Olá, sou <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Lucas</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-2 font-semibold">
-                Analista de Sistemas Pleno/Sênior
+                Analista de Sistemas Pleno | Implantação, Sustentação e Integração
               </p>
               <p className={`text-base mb-4 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                Especialista em Sustentação, Integração e Automação de Sistemas
+                Atuação atual em implantação de sistemas para a PRODAM-SP
               </p>
               <p className="text-sm md:text-base mb-6 italic font-medium text-blue-600">
-                "Transformo sistemas complexos em soluções estáveis, eficientes e escaláveis."
+                "Conecto necessidades de negócio, tecnologia e operação para entregar sistemas confiáveis."
               </p>
 
               <div className={`flex flex-col gap-2 mb-8 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                 <div className="flex flex-wrap gap-3">
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-blue-600" />
-                    <a href="mailto:lucaslopes.ti@live.com">lucaslopes.ti@live.com</a>
+                    <a href="mailto:llopes3025@gmail.com">llopes3025@gmail.com</a>
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-blue-600" />
@@ -258,7 +285,7 @@ export default function Portfolio() {
                 <div className="flex flex-wrap gap-3">
                   <div className="flex items-center gap-2">
                     <Instagram className="w-4 h-4 text-blue-600" />
-                    <a href="https://www.instagram.com/lucas5sola/" target="_blank" rel="noopener noreferrer">@lucas5sola</a>
+                    <a href="https://www.instagram.com/lklopesbjj/" target="_blank" rel="noopener noreferrer">@lklopesbjj</a>
                   </div>
                   <div className="flex items-center gap-2">
                     <Github className="w-4 h-4 text-blue-600" />
@@ -274,7 +301,7 @@ export default function Portfolio() {
                 <a href="#contato" className="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 shadow-lg hover:shadow-xl !text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
                   <Send className="w-5 h-5" /> Contato
                 </a>
-                <a href="/CV_Lucas_Silva_Lopes.pdf" download className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl !text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
+                <a href="/Curriculo_Lucas_Silva_Lopes.docx" download className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl !text-white px-5 py-2 md:px-6 md:py-3 rounded-lg transition-all transform hover:scale-105 text-sm md:text-base font-bold">
                   <Download className="w-5 h-5" /> Baixar CV
                 </a>
               </div>
@@ -294,8 +321,8 @@ export default function Portfolio() {
                 <p className="text-gray-600 dark:text-gray-400">Anos de Experiência</p>
               </div>
               <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">20+</div>
-                <p className="text-gray-600 dark:text-gray-400">Projetos Completados</p>
+                <div className="text-4xl font-bold text-blue-600 mb-2">6</div>
+                <p className="text-gray-600 dark:text-gray-400">Empresas na trajetória</p>
               </div>
               <div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">100%</div>
@@ -303,19 +330,19 @@ export default function Portfolio() {
               </div>
             </div>
             <p className={`text-lg leading-relaxed mb-6 mt-8 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Comecei minha carreira como Analista de Suporte e evoluí para Sênior ao compreender que os melhores sistemas não são apenas estáveis, são <strong>invisíveis ao usuário final</strong>.
+              Profissional de tecnologia com mais de 8 anos de experiência em análise, implantação, sustentação e integração de sistemas corporativos nos setores público, logístico, varejista e industrial.
             </p>
 
             <p className={`text-lg leading-relaxed mb-6 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Ao longo de 8+ anos em TI corporativa, aprendi que resolver problemas técnicos complexos é menos sobre ferramentas e mais sobre <strong>entender negócios</strong>. Isso me levou a especializar-me em sustentação inteligente, automação que liberta times, e arquiteturas que escalam.
+              Atualmente atuo na <strong>CRP Tecnologia</strong>, em projeto de implantação de sistemas para a <strong>PRODAM-SP</strong>, conduzindo reuniões, levantamento de requisitos, configurações em JavaScript, análises em SQL Server e acompanhamento de sprints pelo Azure DevOps.
             </p>
 
             <p className={`text-lg leading-relaxed mb-6 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Trabalho com <strong>SQL, Oracle, Python, .NET, SAP</strong> e ferramentas modernas de observabilidade (<strong>Grafana, Zabbix, New Relic, Elasticsearch</strong>). Mas meu verdadeiro diferencial é transformar requisitos nebulosos em soluções precisas—seja através de <strong>BPMN/UML</strong> ou code robusto.
+              Tenho experiência com <strong>SQL Server, Oracle, JavaScript, Python, .NET, SAP e Hybris</strong>, além de integrações, observabilidade, QA, documentação técnica e metodologias ágeis. Meu foco é transformar necessidades de negócio em soluções claras, testáveis e sustentáveis.
             </p>
 
             <p className={`text-lg leading-relaxed italic font-semibold text-blue-600 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
-              Buscam um Analista Sênior que não apenas resolve problemas, mas os <strong>previne</strong>? Vamos conversar.
+              Busco oportunidades em que eu possa contribuir com visão analítica, proximidade com o negócio e execução técnica na evolução de sistemas corporativos.
             </p>
           </div>
         </div>
@@ -325,7 +352,7 @@ export default function Portfolio() {
       <section id="competências" className="py-20 px-4 w-screen">
         <div className="w-full max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Competências Técnicas</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {skills.map((skill, idx) => (
               <div key={idx} className={`${cardBgClass} backdrop-blur-sm p-6 rounded-xl border ${borderClass} transition-all hover:shadow-lg hover:scale-105 group`}>
                 <div className="text-blue-600 mb-4 group-hover:scale-125 transition-transform">{skill.icon}</div>
@@ -345,7 +372,7 @@ export default function Portfolio() {
       </section>
 
       {/* Soft Skills Section */}
-      <section id="soft skills" className={`py-20 px-4 w-screen ${sectionBgClass}`}>
+      <section id="soft-skills" className={`py-20 px-4 w-screen ${sectionBgClass}`}>
         <div className="w-full max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Competências Comportamentais</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -455,6 +482,10 @@ export default function Portfolio() {
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                  <span><strong>AZ-900 — Microsoft Azure Fundamentals</strong> (2025)</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                   <span><strong>SAP MM</strong> — Training Education Services (2017)</span>
                 </li>
                 <li className="flex items-center gap-3">
@@ -521,7 +552,7 @@ export default function Portfolio() {
                 <h3 className="font-bold mb-3 flex items-center gap-2">
                   <Mail className="w-5 h-5 text-blue-600" /> E-mail
                 </h3>
-                <a href="mailto:lucaslopes.ti@live.com" className="text-blue-600 hover:underline break-all">lucaslopes.ti@live.com</a>
+                <a href="mailto:llopes3025@gmail.com" className="text-blue-600 hover:underline break-all">llopes3025@gmail.com</a>
               </div>
               <div className={`${cardBgClass} backdrop-blur-sm p-6 rounded-xl border ${borderClass}`}>
                 <h3 className="font-bold mb-3 flex items-center gap-2">
@@ -544,7 +575,7 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className={`py-8 px-4 border-t ${borderClass} text-center ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        <p className="mb-2">© 2025 Lucas Silva Lopes. Todos os direitos reservados.</p>
+        <p className="mb-2">© 2026 Lucas Silva Lopes. Todos os direitos reservados.</p>
         <p className="text-sm">Desenvolvido com React e Tailwind CSS</p>
       </footer>
     </div>
